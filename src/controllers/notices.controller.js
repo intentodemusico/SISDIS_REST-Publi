@@ -30,9 +30,9 @@ notesCtrl.createNote = async (req, res) => {
 };
 
 notesCtrl.getNote = async (req, res) => {
-	const titular=req.body.titular;
-    const autor=req.body.autor;
-    const contenido=req.body.contenido;
+	const titular={titular: req.body.titular};
+    const autor={autor: req.body.autor};
+    const contenido={contenido: req.body.contenido};
     if (titular!= null){
         const find=Notice.findOne(titular);
         return find;
