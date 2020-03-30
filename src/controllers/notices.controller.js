@@ -64,8 +64,14 @@ notesCtrl.deleteNote = async (req, res) => {
 };
 
 notesCtrl.updateNote = async (req, res) => {
-	const { _id, titular, autor, contenido } = req.body;
-	res.json('Note Updated');
+	const query={_id: req.body._id};
+	const contenidoUpdate={contenido: req.body.contenido}
+	Notice.updateOne(query, contenidoUpdate)
+		.then((response) => {
+			res.send('do it ma frend')
+		})
+	//const { _id, titular, autor, contenido } = req.body;
+	//res.json('Note Updated');
 };
 
 module.exports = notesCtrl;
