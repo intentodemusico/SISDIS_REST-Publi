@@ -1,6 +1,12 @@
 const notesCtrl = {};
 const Notice= require('../models/Notices');
 
+notesCtrl.findNotes = async (req, res) => {
+   
+    var selector = {"List": {$regex: /.*[A-Z]./, $options:"i"}}
+    const lostPet=await Notice.find(selector);
+    res.json(lostPet);
+};
 
 
 notesCtrl.getNotes = async (req, res) => {
