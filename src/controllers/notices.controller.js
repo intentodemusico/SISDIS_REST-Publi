@@ -24,6 +24,7 @@ notesCtrl.createNote = async (req, res) => {
 	console.log('body', noticeData);
 	Notice.create(noticeData)
 		.then((notice) => {
+            res.send(notice)
 			console.log('Registró', notice);
 		})
 		.catch((err) => {
