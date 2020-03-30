@@ -30,7 +30,21 @@ notesCtrl.createNote = async (req, res) => {
 };
 
 notesCtrl.getNote = async (req, res) => {
-	res.send('getonepost');
+	const titular=req.body.titular;
+    const autor=req.body.autor;
+    const contenido=req.body.contenido;
+    if (titular!= null){
+        const find=Notice.findOne(titular);
+        return find;
+    }
+    if (autor!= null){
+        const find=Notice.findOne(autor);
+        return find;
+    }
+    if (contenido!= null){
+        const find=Notice.findOne(contenido);
+        return find;
+    }
 };
 
 notesCtrl.deleteNote = async (req, res) => {
