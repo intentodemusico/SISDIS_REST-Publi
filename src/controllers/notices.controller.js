@@ -1,9 +1,27 @@
 const notesCtrl = {};
 const Notice = require('../models/Notices');
 
-notesCtrl.findNotes = async (req, res) => {
+notesCtrl.test = async (req, res) => {
+    res.json("{res:1}");
+};
 
-    res.log("ola");
+notesCtrl.t=async (req, res) => {
+    res.send('hello world');
+};
+
+notesCtrl.findNotes = async (req, res) => {
+    const noticeData = {
+        search: req.body.search}
+        
+    var selector = {"Search": {$regex: /.*/, $options:"i"}}
+    Notice.findOne().then(() => {
+        console.log('Registró');
+    })
+    .catch((err) => {
+        console.log('Error al crear');
+        res.send('error: ' + err);
+        res.json(notice);
+    });
 	
 };
 
