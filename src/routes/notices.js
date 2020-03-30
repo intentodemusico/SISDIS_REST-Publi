@@ -7,7 +7,7 @@ router.route('/')
     .get(getNotes)    
     .post(createNote);
 
-router.route('/:id')
+router.route('/change')
     .get(getNote)
     .delete(deleteNote)
     .put(updateNote);
