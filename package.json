@@ -12,5 +12,15 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.7",
     "nodemon": "^2.0.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intentodemusico/SISDIS_REST-Publi.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/intentodemusico/SISDIS_REST-Publi/issues"
+  },
+  "homepage": "https://github.com/intentodemusico/SISDIS_REST-Publi#readme"
 }
