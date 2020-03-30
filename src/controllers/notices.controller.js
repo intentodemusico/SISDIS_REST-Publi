@@ -70,7 +70,10 @@ notesCtrl.updateNote = async (req, res) => {
 	Notice.updateOne(query, contenidoUpdate)
 		.then((response) => {
 			res.send('do it ma frend')
-		})
+        })
+        .catch((err)=>{
+            res.send(errr)
+        })
 	//const { _id, titular, autor, contenido } = req.body;
 	//res.json('Note Updated');
 };
