@@ -1,6 +1,12 @@
 const notesCtrl = {};
 const Notice = require('../models/Notices');
 
+notesCtrl.findNotes = async (req, res) => {
+
+    res.log("ola");
+	
+};
+
 notesCtrl.getNotes = async (req, res) => {
 	console.log('hola');
 	const notice = await Notice.find();
@@ -27,7 +33,21 @@ notesCtrl.createNote = async (req, res) => {
 };
 
 notesCtrl.getNote = async (req, res) => {
-	res.send('getonepost');
+	const titular={titular: req.body.titular};
+    const autor={autor: req.body.autor};
+    const contenido={contenido: req.body.contenido};
+    if (titular!= null){
+        const find=Notice.findOne(titular);
+        return find;
+    }
+    if (autor!= null){
+        const find=Notice.findOne(autor);
+        return find;
+    }
+    if (contenido!= null){
+        const find=Notice.findOne(contenido);
+        return find;
+    }
 };
 
 notesCtrl.deleteNote = async (req, res) => {
