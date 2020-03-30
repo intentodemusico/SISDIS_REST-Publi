@@ -1,0 +1,16 @@
+{
+  "name": "crud_noticias",
+  "version": "1.0.0",
+  "description": "SISDIS",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon --exec node src/index.js"
+  },
+  "author": "Oswalman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7",
+    "nodemon": "^2.0.2"
+  }
+}
