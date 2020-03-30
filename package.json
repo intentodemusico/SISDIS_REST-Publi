@@ -13,12 +13,18 @@
     "mongoose": "^5.9.7",
     "nodemon": "^2.0.2"
   },
+<<<<<<< HEAD
   "devDependencies": {},
+=======
+>>>>>>> 218f6b8a3edac7569cda229d2d095c66a5fd95e2
   "repository": {
     "type": "git",
     "url": "git+https://github.com/intentodemusico/SISDIS_REST-Publi.git"
   },
+<<<<<<< HEAD
   "keywords": [],
+=======
+>>>>>>> 218f6b8a3edac7569cda229d2d095c66a5fd95e2
   "bugs": {
     "url": "https://github.com/intentodemusico/SISDIS_REST-Publi/issues"
   },
