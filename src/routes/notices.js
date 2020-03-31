@@ -7,11 +7,11 @@ router.route('/')
     .get(getNotes)    
     .post(createNote);
 
-router.route('/:id')
+router.route('/change')
     .delete(deleteNote)
     .put(updateNote);
 
-router.route('/:search')
+router.route('/search')
     .get(findNotes);
 
 module.exports = router;
